@@ -1,14 +1,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Post
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding>  
+      <ion-item *ngFor="let post of posts">
+          <ion-thumbnail item-start>
+              <img src="assets/imgs/post.jpg" />
+            </ion-thumbnail>
+          <h5 (click)="goToSecondPage(post)">{{post.title}} </h5>
+        </ion-item>  
 </ion-content>
